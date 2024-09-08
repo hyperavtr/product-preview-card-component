@@ -25,6 +25,12 @@
 	padding: 0;
 }
 
+html,
+body,
+main {
+	height: 100%;
+}
+
 body {
 	font-family: Montserrat;
 	font-size: 14px;
@@ -39,6 +45,7 @@ main {
 	width: fit-content;
 	display: inherit;
 	justify-content: center;
+	align-items: center;
 }
 
 /* Product card containers */
@@ -48,6 +55,7 @@ main {
 	width: min(92%, 38rem);
 	background-color: var(--white-color);
 	border-radius: 0.5rem;
+	height: fit-content;
 }
 
 .text-section {
@@ -170,5 +178,22 @@ main {
 
 	.text-section>* {
 		width: 100%;
+	}
+}
+
+@media only screen and (max-height:474px) {
+	.product-card-container {
+		height: fit-content;
+		margin: 2rem 0;
+	}
+
+	body {
+		height: auto;
+		align-items: unset;
+	}
+
+
+	main {
+		align-items: unset;
 	}
 }
